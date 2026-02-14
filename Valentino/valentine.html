@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>for my fav person ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Meow+Script&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="stylevalentino.css"/>
+</head>
+
+<body>
+
+<!-- Card -->
+<div class="card">
+    <h1 style="font-family: 'Henny Penny', system-ui;"><i>For my fav person </i></h1> <br/> 
+
+    <div  class="heart" id="heart"></div>
+
+    <p style="font-family: 'Meow Script', cursive; font-size: 29px;">
+        I don’t know the perfect words…<br>
+        But I know that when I talk to you,<br>
+        everything becomes calmer and brighter.<br>
+        in a world of billions i always chose you lina.<br>
+        im so rich lina to have you in my life.<br><br>
+        
+        You are special to me.<br>
+        Truly special.
+    </p>
+</div>
+
+<!-- Stars -->
+<script>
+for(let i=0;i<80;i++){
+    let star=document.createElement("div");
+    star.className="star";
+    star.style.left=Math.random()*100+"vw";
+    star.style.top=Math.random()*100+"vh";
+    star.style.animationDelay=Math.random()*3+"s";
+    document.body.appendChild(star);
+}
+</script>
+
+<!-- Floating flowers -->
+<div class="flower" style="left:10%; animation-delay:0s;">🌸</div>
+<div class="flower" style="left:25%; animation-delay:2s;">🌹</div>
+<div class="flower" style="left:40%; animation-delay:4s;">🌺</div>
+<div class="flower" style="left:60%; animation-delay:1s;">🌷</div>
+<div class="flower" style="left:80%; animation-delay:3s;">💮</div>
+
+<!-- Music (starts on heart click) -->
+<script>
+const heart = document.getElementById("heart");
+let musicStarted = false;
+let audio = document.createElement("iframe");
+audio.width = 0;
+audio.height = 0;
+audio.src = "https://tarekkamoun.publit.io/file/s.mp3";
+audio.frameBorder = 0;
+audio.allow = "autoplay";
+
+heart.addEventListener("click", () => {
+    if(!musicStarted){
+        heart.classList.add("beat");
+        document.body.appendChild(audio);
+        musicStarted = true;
+    }
+});
+</script>
+</body>
+</html>
